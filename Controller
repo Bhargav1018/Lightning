@@ -1,0 +1,13 @@
+({
+	handleClick : function(component, event, helper) {
+		var spin= component.get("v.isSpinning");	
+        component.set("v.isSpinning",(!spin));
+        var btnName=component.get("v.btnTitle");
+        if(btnName.includes("Show")){
+          component.set("v.btnTitle","Hide Spinner");  
+        }else{
+            component.set("v.btnTitle","Show Spinner");  
+        }
+        
+	}
+})
