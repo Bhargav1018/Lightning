@@ -1,0 +1,47 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="recordTypeId" type="String" > </aura:attribute>
+    <aura:attribute name="recordNumber" type="Integer" > </aura:attribute>
+    <aura:attribute name="recordName" type="String" > </aura:attribute>
+    <aura:attribute name="isSpinning" type="boolean" default="false"> </aura:attribute>
+    <aura:attribute name="spnVariant" type="string" default="brand" > </aura:attribute>
+    <aura:attribute name="btnTitle" type="string" default="Show Spinner" > </aura:attribute>
+    
+  <lightning:button variant="success" label="{!v.btnTitle}" title="{!v.btnTitle}" onclick="{! c.handleClick }"/>
+    <div class="c-container">
+    <aura:if isTrue="{!v.isSpinning}">
+        <lightning:spinner alternativeText="Loading" size="large" varient= "{!v.spnVariant}" class="mySpinner" />
+        <aura:set attribute="else">
+            
+                <lightning:layout multipleRows="true">
+                    <lightning:layoutItem size="12" smallDeviceSize="6" mediumDeviceSize="4" largeDeviceSize="3" padding="around-small">
+                        <div class="custom-box">1</div>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="12" smallDeviceSize="6" mediumDeviceSize="4" largeDeviceSize="3" padding="around-small">
+                        <div class="custom-box">2</div>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="12" smallDeviceSize="6" mediumDeviceSize="4" largeDeviceSize="3" padding="around-small">
+                        <div class="custom-box">3</div>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="12" smallDeviceSize="6" mediumDeviceSize="4" largeDeviceSize="3" padding="around-small">
+                        <div class="custom-box">4</div>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="12" smallDeviceSize="6" mediumDeviceSize="4" largeDeviceSize="3" padding="around-small">
+                        <div class="custom-box">5</div>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="12" smallDeviceSize="6" mediumDeviceSize="4" largeDeviceSize="3" padding="around-small">
+                        <div class="custom-box">6</div>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="12" smallDeviceSize="6" mediumDeviceSize="4" largeDeviceSize="3" padding="around-small">
+                        <div class="custom-box">7</div>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="12" smallDeviceSize="6" mediumDeviceSize="4" largeDeviceSize="3" padding="around-small">
+                        <div class="custom-box">8</div>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            
+        </aura:set>
+        
+    </aura:if>
+    </div>
+    
+</aura:component>
